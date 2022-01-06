@@ -30,9 +30,9 @@
 
 #### I using of Docker and Docker Compose for project
 
-### I using of queue job for send sms
+#### I using of queue job for send sms
 
-### I using of Custom Exceptions for throw exceptions and error handling
+#### I using of Custom Exceptions for throw exceptions and error handling
 
 ### Redis Cache with important method Cache::remember() :
 
