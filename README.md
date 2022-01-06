@@ -32,6 +32,7 @@
 
 ### I using of queue job for send sms
 
+### I using of Custom Exceptions for throw exceptions and error handling
 
 ### Redis Cache with important method Cache::remember() :
 
