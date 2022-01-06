@@ -8,6 +8,9 @@
 
 **two run seeder database**
 
+**Then run command for run laravel app:**
+
+    php artisan serve
 
 ### I using of test case for :
 
