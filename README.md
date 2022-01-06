@@ -16,6 +16,8 @@
 
     php artisan serve
 
+**Note: for set config api sms please go to .env file**
+
 ### I using of test case for :
 
 **report of all sms**
