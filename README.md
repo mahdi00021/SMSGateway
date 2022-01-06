@@ -6,7 +6,11 @@
 
 **first run migrations**
 
+    php artisan migrate
+
 **two run seeder database**
+
+    php artisan db:seed --class="DatabaseSeeder" 
 
 **Then run command for run laravel app:**
 
@@ -25,6 +29,8 @@
 **refresh token**
 
 #### I using of Docker and Docker Compose for project
+
+### I using of queue job for send sms
 
 
 ### Redis Cache with important method Cache::remember() :
