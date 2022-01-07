@@ -1,15 +1,24 @@
-##SMS Gateway App
+## SMS Gateway App
 
-###How do I run this project and install database?
+### How do I run this project and install database?
 
 **setup docker**
 
 **first run migrations**
 
+    php artisan migrate
+
 **two run seeder database**
 
+    php artisan db:seed --class="DatabaseSeeder" 
 
-###I using of test case for :
+**Then run command for run laravel app:**
+
+    php artisan serve
+
+**Note: please for set config api sms going to .env file**
+
+### I using of test case for :
 
 **report of all sms**
 
@@ -21,10 +30,13 @@
 
 **refresh token**
 
-####I using of Docker and Docker Compose for project
+#### I using of Docker and Docker Compose for project
 
+#### I using of queue job for send sms
 
-###Redis Cache with important method Cache::remember() :
+#### I using of Custom Exceptions for throw exceptions and error handling
+
+### Redis Cache with important method Cache::remember() :
 
 **redis** : 
 
@@ -32,7 +44,7 @@ I using of Cache::remember() because this method will cache mysql query for
 10 min And if item wasn’t in redis cache first will add to redis And then items
 cached show to user and is optimize and short code
 
-###Web Routes Are :
+### Web Routes Are :
 
 **Login Page:**
 
@@ -51,7 +63,7 @@ cached show to user and is optimize and short code
     http://127.0.0.1:8000/report
 
 
-###EndPoints Are :
+### EndPoints Are :
 
 **Send SMS to phoneNumber:**
 
@@ -124,3 +136,15 @@ Register user with name,email,password
     method : post
 
     http://127.0.0.1:8000/api/auth/logout
+    
+**Pictures of Test App** 
+
+![smsGateway1](https://user-images.githubusercontent.com/9013165/148432856-ceec0058-6e56-46cb-9bbc-935075f8d281.jpg)
+
+
+![smsGateway2](https://user-images.githubusercontent.com/9013165/148432955-ec901fb4-5d99-4612-a216-99df931cfaa5.jpg)
+
+
+
+![smsGateway3](https://user-images.githubusercontent.com/9013165/148432988-7cd98144-78c0-4945-ba81-5b9196ccb5cc.jpg)
+

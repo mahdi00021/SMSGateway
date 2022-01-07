@@ -32,6 +32,6 @@ class SendSmsJob implements ShouldQueue
     {
 
         resolve("CreateApiFactory")->createApi($this->options);
-        
+
     }
 }
