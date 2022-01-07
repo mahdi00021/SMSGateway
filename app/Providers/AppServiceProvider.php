@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('CreateApiFactory', function ($app) {
+        $this->app->singleton(CreateApiFactory::class, function ($app) {
             return new CreateApiFactory();
         });
     }
