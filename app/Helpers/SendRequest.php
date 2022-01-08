@@ -40,18 +40,18 @@ abstract class SendRequest
 
                 $sms = new Report();
                 $sms->body = $options['message'];
-                $sms->to_phoneNumber = $options['receptor'];
+                $sms->phone_number = $options['receptor'];
                 $sms->status = 'sent';
-                $sms->nameApi = $this->getSenderApi();
+                $sms->name_api = $this->getSenderApi();
                 $sms->error = 'false';
                 $sms->save();
 
             } else {
                 $sms = new Report();
                 $sms->body = $options['message'];
-                $sms->to_phoneNumber = $options['receptor'];
+                $sms->phone_number = $options['receptor'];
                 $sms->status = 'fail';
-                $sms->nameApi = $this->getSenderApi();
+                $sms->name_api = $this->getSenderApi();
                 $sms->error = 'true';
                 $sms->save();
             }

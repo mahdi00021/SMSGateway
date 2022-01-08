@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Validator;
 class SmsSendController extends Controller
 {
 
+    private $options = [];
+
     public function sendSMS(Request $request)
     {
         Validator::make($request->all(), [
@@ -16,10 +18,10 @@ class SmsSendController extends Controller
             'body' => 'required|string|max:255',
         ]);
 
-        $options['receptor'] = $request->input("phoneNumber");
-        $options['message'] = $request->input("body");
-        $options['sender'] = env("SENDER_NUMBER");
+        $this->options['receptor'] = $request->input("phoneNumber");
+        $this->options['message'] = $request->input("body");
+        $this->options['sender'] = env("SENDER_NUMBER");
 
-        dispatch(new SendSmsJob($options));
+        return dispatch(new SendSmsJob($this->options));
     }
 }

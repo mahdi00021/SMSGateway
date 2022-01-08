@@ -16,11 +16,11 @@ class CreateReportTable extends Migration
         Schema::create('report', function (Blueprint $table) {
             $table->increments('id');
             $table->string('body');
-            $table->string('to_phoneNumber');
+            $table->string('phone_number');
             $table->string('status');
-            $table->string('nameApi');
+            $table->string('name_api');
             $table->string('error');
-            $table->index(['id', 'to_phoneNumber', 'status', 'nameApi', 'error']);
+            $table->index(['id', 'phone_number', 'status', 'name_api', 'error']);
         });
     }
 

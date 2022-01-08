@@ -9,9 +9,10 @@
 namespace App\FactoryApi;
 
 
+use App\FactoryApi\Interfaces\ISmsSender;
 use App\Helpers\SendRequest;
 
-class Ghasedak extends SendRequest
+class Ghasedak extends SendRequest implements ISmsSender
 {
     public function sendSMS(array $options)
     {
